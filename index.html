@@ -52,6 +52,31 @@
         <script src="./AmmoUtils.js"></script>
         <script src="./AmmoMesh.js"></script>
         
+	   <div id="applixir_vanishing_div" hidden>
+   <iframe id="applixir_parent" allow="autoplay"></iframe>
+</div>
+ <script type="text/javascript" src="https://cdn.applixir.com/applixir.sdk3.0m.js"></script>
+   <script type="application/javascript">
+  function adStatusCallback(status) {
+       
+            if (status)console.log('Applixir status: ' + status);
+
+        }
+     
+        var options = {
+
+            zoneId: 2726, // The zone ID from the Applixir "Games" page (required)
+            gameId: 4760,
+            dMode: 1,       // dMode 1 for MD5 checksum 0 for no MD5 checksum
+            adStatusCb: adStatusCallback
+        };
+
+                // Call the following function when you want to present a video ad to your user
+
+        invokeApplixirVideoUnit(options);
+
+    </script>
+	    
         <script>
 
 			// Detects webgl
